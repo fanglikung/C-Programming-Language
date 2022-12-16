@@ -15,22 +15,21 @@ int main(int argc, char* argv[])
 
 	// set up the numbers
 	numbers[0] = 1;
-	numbers[1] = 3;
+	numbers[1] = 2;
 	numbers[2] = 3;
-	numbers[3] = 4;
+	numbers[3] = 'a';
 
 	// set up the name
-	name[0] = 'z';
+	name[0] = 'Z';
 	name[1] = 'e';
 	name[2] = 'd';
 	name[3] = 'A';
-	name[4] = 'c';
 	// then print them out initialized
-	printf("numbers: %d %d %d %d %d\n",
-			numbers[0], numbers[1], numbers[2],numbers[3],numbers[4]);
+	printf("numbers: %d %d %d %d \n",
+			numbers[0], numbers[1], numbers[2],numbers[3]);
 
-	printf("name each: %c %c %c %c %c\n",
-	name[0], name[1], name[2], name[3],name[4]);
+	printf("name each: %c %c %c %c \n",
+	name[0], name[1], name[2], name[3]);
 
 	// print the name like a string
 	printf("name: %s\n",name);
