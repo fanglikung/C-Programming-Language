@@ -42,16 +42,25 @@ int main(int argc, char *argv[])
 		"Alan","Frank",
 		"Mary","John","Lisa"
 	};
-	int *A=ages;
- 	int x =100;
-	printf("the first integer is %d \n",A[0]);
+//	int *A=ages;
+// 	int x =100;
+//	printf("the first integer is %d \n",A[0]);
 //	printf("the first letter of %s is  %d \n ",names[0],names[0][0]);  
 //	printf("the second letter of %s is %d \n",names[0],names[0][1]);
 //	printf("the third letter of %s is  %d \n ",names[0],names[0][2]);
 //	printf("the fourth letter of %s is %d \n",names[0],names[0][3]);
 //	printf("the fith  letter of %s is  %d \n	",names[0],names[0][4]);
 	//safely get the size of ages
+
+	// create two arrays we care about
+//	int ages[]={23,43,12,89,2};
 	
+	char*name[]={
+		"Alan","Frank",
+		"Mary","John","Lisa"
+	};
+
+	// safely get the size of ages	
 	int count = sizeof(ages)/sizeof(int);
 	int i = 0;
 
