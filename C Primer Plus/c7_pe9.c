@@ -4,19 +4,15 @@ int main (void)
 {
 	int i,j,ch;
 	int true;
-	int end;
-	int t1,test;
-	printf("Enter a positive integer or q to quit.\n");
-	
-	while((test=scanf("%d",&ch))==1 || ch!='q')
-	{	true=1;
-		if (test!=1)
+	int t1;
+	while(1)
+	{	
+		printf("Enter a positive integer or q to quit.\n");
+		if (scanf("%d",&ch)!=1)
 		{	
-			t1=getchar();
-			if (t1=='q')
+			if ((t1=getchar())=='q')
 				break;
 			printf("%c is not a positive integer.\n",t1);
-			printf("Enter a positive integer or q to quit.\n");
 			continue;
 		}
 		if (getchar()!='\n')
@@ -25,7 +21,7 @@ int main (void)
 		{	printf("the following is all prime number of %d\n",ch); 
 			
 			for (i=2;i<=ch;i++)
-			{
+			{	true=1;
 				for (j=2;j<=i;j++)
 				{
 					if (i%j==0 && i!=j)
@@ -33,20 +29,13 @@ int main (void)
 				}
 				if (true)	
 					printf("%d ",i);
-				true=1;
 			}
 			printf("\n");
-			printf("Enter a positive integer or q to quit.\n");
 		}
-		else if (ch>=0)
-		{	
+		else if (ch==1)
 			printf("%d has no prime.\n",ch);
-			printf("Enter a positive integer or q to quit.\n");
-		}
 		else
-		{	printf("%d is not a positive integer.\n",ch);
-			printf("Enter a positive integer or q to quit.\n");
-		}
+			printf("%d is not a positive integer.\n",ch);
 	}
 	return 0;
 }
